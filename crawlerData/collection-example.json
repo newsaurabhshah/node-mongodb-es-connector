@@ -1,0 +1,30 @@
+{
+    "mongodb": {
+        "m_database": "test",
+        "m_collectionname": "component",
+        "m_filterfilds": null,
+        "m_returnfilds": null,
+        "m_extendfilds":null,
+        "m_extendinit":null,
+        "m_connection":{
+            "m_servers":["localhost:27017","localhost:37017"],
+            "m_authentication":{
+                "username":null,
+                "password":null,
+                "authsource":"admin",
+                "replicaset":"rs0"
+            }
+        },
+        "m_url":"mongodb://127.0.0.1:27017,127.0.0.1:37017/test?replicaSet=rs0",
+        "m_documentsinbatch": 5000,
+        "m_delaytime": 1000
+    },
+    "elasticsearch": {
+        "e_index": "ampdatabase",
+        "e_type": "component",
+        "e_connection": {
+            "e_server": "http://localhost:9200",
+            "e_httpauth":null
+        }
+    }
+}
