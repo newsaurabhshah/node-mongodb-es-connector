@@ -5,9 +5,9 @@ RUN mkdir -p /opt/node-mongodb-es-connector
 RUN chmod -R 777 /opt/node-mongodb-es-connector
 # Many security system will not allow Docker to run as root. Adding nonroot user and switching to it. Any downstream image are promoted to use same User!
 RUN addgroup -S nonrootgroup && adduser -S nonroot -G nonrootgroup
-USER nonroot
 # COPY all code
-COPY . /opt/node-mongodb-es-connector
+COPY --chown=nonroot . /opt/node-mongodb-es-connector
+USER nonroot
 WORKDIR /opt/node-mongodb-es-connector
 # This will add packages
 RUN npm install
