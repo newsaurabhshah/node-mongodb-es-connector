@@ -4,7 +4,7 @@ FROM node:10.15.1-alpine
 RUN mkdir -p /opt/node-mongodb-es-connector
 RUN chmod -R 777 /opt/node-mongodb-es-connector
 # Many security system will not allow Docker to run as root. Adding nonroot user and switching to it. Any downstream image are promoted to use same User!
-RUN addgroup -S nonrootgroup && adduser -S nonroot -G nonrootgroup
+RUN addgroup -S nonroot && adduser -S nonroot -G nonroot
 # COPY all code
 COPY --chown=nonroot . /opt/node-mongodb-es-connector
 USER nonroot
