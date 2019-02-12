@@ -20,7 +20,7 @@
         "m_delaytime": 1000
     },
     "elasticsearch": {
-        "e_index": "ampdatabase",
+        "e_index": "test",
         "e_type": "component",
         "e_connection": {
             "e_server": "http://localhost:9200",
